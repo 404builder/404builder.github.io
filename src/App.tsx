@@ -3,7 +3,6 @@ import Noise from "./components/noise";
 
 interface Translations {
   title: string;
-  subtitle: string;
   description: string;
   tags: string[];
   contact: string;
@@ -16,14 +15,12 @@ interface TranslationSet {
 const translations  : TranslationSet = {
   en: {
     title: "404builder",
-    subtitle: "Ethical Hacker 🇵🇾",
     description: "Not everything that works is truly well built.",
     tags: ["# Red Team", "# Pentester", "# Reverser"],
     contact: "Contact",
   },
   es: {
     title: "404builder",
-    subtitle: "Hacker Ético 🇵🇾",
     description: "No todo lo que funciona está realmente bien hecho.",
     tags: ["# Red Team", "# Pentester", "# Reverser"],
     contact: "Contacto",
@@ -106,8 +103,8 @@ export default function App() {
           {t.title}
         </h1>
 
-        <p className="text-green-300 text-lg mt-4 font-mono">{t.subtitle}</p>
-        <p className="text-green-300 text-base font-mono">{t.description}</p>
+
+        <p className="text-green-300 text-base font-mono mt-5">{t.description}</p>
 
         <div className="flex flex-wrap justify-center gap-2 mt-6 text-sm">
           {t.tags.map((tag) => (
