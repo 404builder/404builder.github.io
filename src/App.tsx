@@ -17,14 +17,14 @@ const translations  : TranslationSet = {
   en: {
     title: "404builder",
     subtitle: "Ethical Hacker 🇵🇾",
-    description: "I break things. Out of curiosity.",
+    description: "Not everything that works is truly well built.",
     tags: ["# Red Team", "# Pentester", "# Reverser"],
     contact: "Contact",
   },
   es: {
     title: "404builder",
     subtitle: "Hacker Ético 🇵🇾",
-    description: "Rompo cosas. Por curiosidad.",
+    description: "No todo lo que funciona está realmente bien hecho.",
     tags: ["# Red Team", "# Pentester", "# Reverser"],
     contact: "Contacto",
   },
