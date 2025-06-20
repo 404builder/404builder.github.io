@@ -47,14 +47,9 @@ export default function App() {
 
     const resizeCanvas = () => {
 
-      // get body dimensions
-      const body = document.body;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-      const width = body.clientWidth;
-      const height = body.clientHeight;
-
-      canvas.width = width;
-      canvas.height = height;
     };
 
     resizeCanvas();
