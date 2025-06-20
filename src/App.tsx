@@ -46,8 +46,15 @@ export default function App() {
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+
+      // get body dimensions
+      const body = document.body;
+
+      const width = body.clientWidth;
+      const height = body.clientHeight;
+
+      canvas.width = width;
+      canvas.height = height;
     };
 
     resizeCanvas();
@@ -84,9 +91,8 @@ export default function App() {
 
   return (
     <>
-      <canvas ref={canvasRef} className="fixed top-0 left-0 -z-10" />
-      <div className="  min-h-dvh flex flex-col items-center justify-center  ">
-        <select
+      <canvas ref={canvasRef} className="absolute left-0 top-0 w-screen h-screen pointer-events-none" />
+              <select
           className="fixed top-3 right-3 z-10 bg-black text-green-400  border border-green-500 font-mono text-sm px-2 py-1"
           value={lang}
           onChange={(e) => setLang(e.target.value)}
@@ -95,7 +101,9 @@ export default function App() {
           <option value="en">🌐 English</option>
         </select>
 
-        <div className=" bg-black/10 backdrop-blur-2xl text-center p-20 rounded-4xl ">
+      <div className="  min-h-dvh flex flex-col items-center justify-center  w-full overflow-hidden  ">
+
+        <div className=" bg-black/10 backdrop-blur-2xl text-center sm:px-20 sm:py-20 py-20 px-2 sm:rounded-4xl mx-auto w-full sm:w-fit ">
         <h1
           className="text-5xl md:text-6xl text-green-400 font-mono"
           style={{ textShadow: "0 0 20px #00ff00, 0 0 40px #00ff00" }}
